@@ -14,6 +14,9 @@ class CurrentWeatherWidget extends StatelessWidget {
       children: [
         // temperature
         temperatureWidget(),
+        const SizedBox(
+          height: 20,
+        ),
         // weather description
         weatherDescriptionWidget(),
       ],
@@ -62,8 +65,88 @@ class CurrentWeatherWidget extends StatelessWidget {
   }
 
   Widget weatherDescriptionWidget() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            // wind speed
+            Container(
+              width: 60,
+              height: 60,
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: CustomColors.cardColor,
+              ),
+              child: Image.asset("assets/icons/wind.png"),
+            ),
+            // humidity
+            Container(
+              width: 60,
+              height: 60,
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: CustomColors.cardColor,
+              ),
+              child: Image.asset("assets/icons/humidity.png"),
+            ),
+            // clouds
+            Container(
+              width: 60,
+              height: 60,
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: CustomColors.cardColor,
+              ),
+              child: Image.asset("assets/icons/clouds.png"),
+            )
+          ],
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            SizedBox(
+              height: 20,
+              width: 60,
+              child: Text(
+                "${weatherDataCurrent.current.windSpeed} km/h",
+                style: const TextStyle(
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+              width: 60,
+              child: Text(
+                "${weatherDataCurrent.current.humidity}%",
+                style: const TextStyle(
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+              width: 60,
+              child: Text(
+                "${weatherDataCurrent.current.clouds}%",
+                style: const TextStyle(
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            )
+          ],
+        )
+      ],
     );
   }
 }
