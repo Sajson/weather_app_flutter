@@ -2,11 +2,15 @@ import 'package:flutter/foundation.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 
+import '../api/fetch_weather.dart';
+import '../model/weather_data.dart';
+
 class GlobalController extends GetxController {
   // create variables
   final RxBool _isLoading = true.obs;
   final RxDouble _lat = 0.0.obs;
   final RxDouble _lon = 0.0.obs;
+  final weatherData = WeatherData().obs;
 
   // creating instances
   RxBool checkLoading() => _isLoading;
@@ -14,6 +18,8 @@ class GlobalController extends GetxController {
   RxDouble getLat() => _lat;
 
   RxDouble getLon() => _lon;
+
+  WeatherData getWeatherData() => weatherData.value;
 
   @override
   void onInit() {
@@ -52,7 +58,11 @@ class GlobalController extends GetxController {
     ).then((Position position) {
       _lat.value = position.latitude;
       _lon.value = position.longitude;
-      _isLoading.value = false;
+      // calling API
+      return FetchWeather().processData(_lat.value, _lon.value).then((value) {
+        _isLoading.value = false;
+        weatherData.value = value;
+      });
     }).catchError((e) {
       if (kDebugMode) {
         print(e);
