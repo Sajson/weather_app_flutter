@@ -4,8 +4,12 @@ This is a weather app developed using Flutter, a cross-platform framework for bu
 mobile applications. The app allows users to get real-time weather information for their current
 location.
 
-![Weather App](/assets/APP_DESIGN_1.png)
-![Weather App](/assets/APP_DESIGN_2.png)
+<p align="center">
+  <img src="https://github.com/Sajson/weather_app_flutter/blob/main/assets/APP_DESIGN_1.png?raw=true" height="550px">
+</p>
+<p align="center">
+  <img src="https://github.com/Sajson/weather_app_flutter/blob/main/assets/APP_DESIGN_2.png?raw=true" height="550px">
+</p>
 
 ## Features
 
@@ -23,19 +27,19 @@ location.
 git clone https://github.com/Sajson/weather_app_flutter.git
 ```
 
-1. Change the working directory
+2. Change the working directory
 
 ```bash
 cd weather_app_flutter
 ```
 
-1. Install dependencies
+3. Install dependencies
 
 ```bash
 flutter pub get
 ```
 
-1. Run the app
+4. Run the app
 
 ```bash
 flutter run
@@ -71,9 +75,9 @@ The app relies on the following dependencies:
 - [flutter_svg](https://pub.dev/packages/flutter_svg): An SVG rendering and widget library for
   Flutter, which allows painting and displaying Scalable Vector Graphics 1.1 files.
 - [google_fonts](https://pub.dev/packages/google_fonts): A package to include fonts from
-  fonts.google.com
-  in your Flutter app.
-  To install these dependencies, run the following command:
+  fonts.google.com in your Flutter app.
+
+To install these dependencies, run the following command:
 
 ```bash
 flutter pub get
