@@ -1,16 +1,93 @@
-# weather_app_flutter
+# Weather App
 
-A new Flutter project.
+This is a weather app developed using Flutter, a cross-platform framework for building beautiful
+mobile applications. The app allows users to get real-time weather information for their current
+location.
 
-## Getting Started
+![Weather App](/assets/APP_DESIGN_1.png)
+![Weather App](/assets/APP_DESIGN_2.png)
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Current weather information: Users can view the current weather conditions, including temperature,
+  humidity, wind speed, and weather description.
+- 7-day forecast: The app provides a 7-day weather forecast, allowing users to plan ahead.
+- Hourly forecast: Users can view the weather conditions for the next 48 hours.
+- Comfort level: The app provides a comfort level based on the current weather conditions.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository
+
+```bash
+git clone https://github.com/Sajson/weather_app_flutter.git
+```
+
+1. Change the working directory
+
+```bash
+cd weather_app_flutter
+```
+
+1. Install dependencies
+
+```bash
+flutter pub get
+```
+
+1. Run the app
+
+```bash
+flutter run
+```
+
+## API
+
+Api used in this project is [OpenWeatherMap](https://openweathermap.org/api)
+
+## Configuration
+
+To use the app, you need to obtain an API key from a weather data provider. Add your API key in
+the `lib/utils/api.dart` file:
+
+```dart
+
+const apiKey = 'YOUR_API_KEY';
+```
+
+Replace YOUR_API_KEY with your actual API key.
+
+## Dependencies
+
+The app relies on the following dependencies:
+
+- [http](https://pub.dev/packages/http): A composable, Future-based library for making HTTP
+  requests.
+- [intl](https://pub.dev/packages/intl): Contains code to deal with internationalized/localized
+- [geolocator](https://pub.dev/packages/geolocator): A Flutter geolocation plugin which provides
+  easy access to platform-specific location services.
+- [flutter_spinkit](https://pub.dev/packages/flutter_spinkit): A collection of loading indicators
+  animated with flutter.
+- [flutter_svg](https://pub.dev/packages/flutter_svg): An SVG rendering and widget library for
+  Flutter, which allows painting and displaying Scalable Vector Graphics 1.1 files.
+- [google_fonts](https://pub.dev/packages/google_fonts): A package to include fonts from
+  fonts.google.com
+  in your Flutter app.
+  To install these dependencies, run the following command:
+
+```bash
+flutter pub get
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+
+## Acknowledgements
+
+- The app design was inspired by various weather apps available on the market.
+- The app icons were downloaded from [icons8](https://icons8.com/icon/set/weather/fluency).

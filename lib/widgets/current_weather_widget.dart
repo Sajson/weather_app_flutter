@@ -53,7 +53,6 @@ class CurrentWeatherWidget extends StatelessWidget {
                 text: "${weatherDataCurrent.current.weather![0].description}",
                 style: const TextStyle(
                   fontSize: 14,
-                  fontWeight: FontWeight.w400,
                   color: Colors.grey,
                 ),
               ),
@@ -117,7 +116,7 @@ class CurrentWeatherWidget extends StatelessWidget {
               child: Text(
                 "${weatherDataCurrent.current.windSpeed} km/h",
                 style: const TextStyle(
-                  fontSize: 14,
+                  fontSize: 12,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -128,7 +127,7 @@ class CurrentWeatherWidget extends StatelessWidget {
               child: Text(
                 "${weatherDataCurrent.current.humidity}%",
                 style: const TextStyle(
-                  fontSize: 14,
+                  fontSize: 12,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -139,7 +138,7 @@ class CurrentWeatherWidget extends StatelessWidget {
               child: Text(
                 "${weatherDataCurrent.current.clouds}%",
                 style: const TextStyle(
-                  fontSize: 14,
+                  fontSize: 12,
                 ),
                 textAlign: TextAlign.center,
               ),
