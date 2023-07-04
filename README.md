@@ -70,10 +70,12 @@ The app relies on the following dependencies:
 - [intl](https://pub.dev/packages/intl): Contains code to deal with internationalized/localized
 - [geolocator](https://pub.dev/packages/geolocator): A Flutter geolocation plugin which provides
   easy access to platform-specific location services.
-- [flutter_spinkit](https://pub.dev/packages/flutter_spinkit): A collection of loading indicators
-  animated with flutter.
-- [flutter_svg](https://pub.dev/packages/flutter_svg): An SVG rendering and widget library for
-  Flutter, which allows painting and displaying Scalable Vector Graphics 1.1 files.
+- [geocoding](https://pub.dev/packages/geocoding): A Flutter geocoding plugin which provides
+  easy access to platform-specific geocoding services.
+- [get](https://pub.dev/packages/get): A Flutter package for navigation that gets rid of the
+  boilerplate code.
+- [sleek_circular_slider](https://pub.dev/packages/sleek_circular_slider): A Flutter package
+  which provides a sleek circular slider.
 - [google_fonts](https://pub.dev/packages/google_fonts): A package to include fonts from
   fonts.google.com in your Flutter app.
 
